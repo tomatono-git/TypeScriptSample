@@ -8,5 +8,8 @@
   },
   "devDependencies": {
     "knockout.mapping": "registry:npm/knockout.mapping#2.0.0+20160319005119"
+  },
+  "globalDevDependencies": {
+    "node": "registry:dt/node#7.0.0+20170322231424"
   }
 }
