@@ -19,6 +19,7 @@
   "license": "ISC",
   "dependencies": {
     "jquery": "^3.2.1",
+    "jstree": "^3.3.4",
     "knockout": "^3.4.2",
     "typeahead": "^0.2.2"
   },
