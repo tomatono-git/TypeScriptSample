@@ -3,30 +3,24 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  // "scripts": {
-  //   "test": "echo \"Error: no test specified\" && exit 1"
-  // },
-
-
   "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        // "clean": "rm -rf lib",
-        "clean": "rm -rf build/js && rm -rf lib",
-        "build": "npm run clean && babel src -d lib --experimental",
-        // "server": "nodemon lib/server/server",
-        // "dev-server": "node lib/server/webpack",
-        //         "watch-js": "/usr/local/bin/babel src -d lib --experimental -w",
-        "start": "npm run watch-js & npm run dev-server & npm run server"
-    },
-    "babel": {
-        "presets": ["es2015","react"]
-    },
-
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf build/js && rm -rf lib",
+    "build": "npm run clean && babel src -d lib --experimental",
+    "start": "npm run watch-js & npm run dev-server & npm run server"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  },
   "author": "tomato",
   "license": "ISC",
   "dependencies": {
     "jquery": "^3.2.1",
     "knockout": "^3.4.2",
     "typeahead": "^0.2.2"
-  }
+  },
+  "devDependencies": {}
 }
