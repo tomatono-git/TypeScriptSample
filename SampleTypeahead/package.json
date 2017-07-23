@@ -23,5 +23,7 @@
     "knockout": "^3.4.2",
     "typeahead": "^0.2.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "electron-prebuilt": "^1.4.13"
+  }
 }

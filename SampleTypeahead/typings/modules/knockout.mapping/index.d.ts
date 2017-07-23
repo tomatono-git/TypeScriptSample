@@ -11,14 +11,23 @@ import * as ko from 'knockout';
 
 module knockoutMapping {
     export interface Options {
-        ignore?: string[];
-        include?: string[];
-        copy?: string[];
-        mappedProperties?: string[];
-        deferEvaluation?: boolean;
-        create?: (options: CreateOptions) => void;
-        update?: (options: UpdateOptions) => void;
-        key?: (data: any) => any;
+        // TODO ?がついてるとビルドエラーになるので暫定対応
+        ignore: string[];
+        include: string[];
+        copy: string[];
+        mappedProperties: string[];
+        deferEvaluation: boolean;
+        create: (options: CreateOptions) => void;
+        update: (options: UpdateOptions) => void;
+        key: (data: any) => any;
+        // ignore?: string[];
+        // include?: string[];
+        // copy?: string[];
+        // mappedProperties?: string[];
+        // deferEvaluation?: boolean;
+        // create?: (options: CreateOptions) => void;
+        // update?: (options: UpdateOptions) => void;
+        // key?: (data: any) => any;
         
         [key: string]: string[] | boolean | Function | Options;
     }
