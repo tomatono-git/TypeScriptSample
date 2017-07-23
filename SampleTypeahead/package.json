@@ -24,6 +24,7 @@
     "typeahead": "^0.2.2"
   },
   "devDependencies": {
-    "electron-prebuilt": "^1.4.13"
+    "electron-prebuilt": "^1.4.13",
+    "typescript": "^2.4.2"
   }
 }
