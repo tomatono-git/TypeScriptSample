@@ -2,6 +2,7 @@
   "name": "typeahead",
   "dependencies": {},
   "globalDependencies": {
+    "electron/github-electron.app": "registry:dt/electron/github-electron.app#0.37.2+20160405225030",
     "jquery": "registry:dt/jquery#1.10.0+20170310222111"
   }
 }

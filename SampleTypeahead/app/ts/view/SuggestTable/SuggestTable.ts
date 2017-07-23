@@ -4,7 +4,15 @@
 // import * as ko  from 'knockout';
 import * as ko  from 'knockout';
 
-export class SuggestTable {
+import IComponent from "../IComponent";
+import SuggestRow from "SuggestRow";
+
+/**
+ * サジェストのテーブル
+ */
+export default class SuggestTable implements IComponent {
+
+    public component: string = "suggest-table";
 
     public rows: ko.ObservableArray<SuggestRow>;
 
@@ -15,25 +23,19 @@ export class SuggestTable {
             new SuggestRow("key3", "val3"),
         ]);
 
-        // ko.track();
+        // ko.track(this);
     }
 
-    public addRow(): void {
-        this.rows.push(new SuggestRow("addedKey", "addedVal"));
+    public addRow(row: SuggestRow): void {
+        this.rows.push(row);
     }
 
-    public removeRow(target: any, xx: any): void {
+    public addBlankRow(): void {
+        this.addRow(new SuggestRow("addedKey", "addedVal"));
+    }
+
+    public removeRow(target: any): void {
         console.log("removeRow(): target=%o", target);
         this.rows.remove(<SuggestRow>target);
-    }
-}
-
-class SuggestRow {
-    key: ko.Observable<string>;
-    val: ko.Observable<string>;
-
-    constructor(key?: string, val?: string) {
-        this.key = ko.observable<string>((key) ? key : "");
-        this.key = ko.observable<string>((val) ? val : "");
     }
 }

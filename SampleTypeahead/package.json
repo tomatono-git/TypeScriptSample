@@ -11,8 +11,8 @@
   "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         // "clean": "rm -rf lib",
-        "clean": "rm -rf build/js",
-        "build": "npm run clean && /usr/local/bin/babel src -d lib --experimental",
+        "clean": "rm -rf build/js && rm -rf lib",
+        "build": "npm run clean && babel src -d lib --experimental",
         // "server": "nodemon lib/server/server",
         // "dev-server": "node lib/server/webpack",
         //         "watch-js": "/usr/local/bin/babel src -d lib --experimental -w",
